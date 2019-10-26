@@ -1,0 +1,56 @@
+{
+  "name": "node-cli-app-template",
+  "version": "1.1.1",
+  "description": "get unread messages report",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "babel src --out-dir dist --source-maps",
+    "build:prod": "babel src --out-dir dist",
+    "dev": "nodemon -w src --exec \"npm run build:dev\""
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Efrat19/node-cli-app-template.git"
+  },
+  "keywords": [
+    "slack",
+    "slack-api",
+    "messages"
+  ],
+  "author": "efrat19",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Efrat19/node-cli-app-template/issues"
+  },
+  "homepage": "https://github.com/Efrat19/node-cli-app-template#readme",
+  "bin": {
+    "node-cli-app-template": "./dist/index.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.5",
+    "log4js": "^5.3.0",
+    "nodemon": "^1.19.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}

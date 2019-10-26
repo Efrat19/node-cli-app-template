@@ -1,0 +1,15 @@
+FROM node:lts-alpine as builder
+
+WORKDIR /usr/app
+
+COPY package*.json ./
+
+RUN npm i
+
+COPY . .
+
+RUN npm run build:prod
+
+RUN npm i -g
+
+CMD ["node-cli-app-template"]
